@@ -6,42 +6,60 @@ namespace Data.Entrees
 {
     class DoubleDraugr
     {
-        private double _price;
-        private uint _calories;
-        private List<String> _specialInstructions;
-        private List<Boolean> _ingredients;
 
         /// <summary>
         /// Price property of entree item
         /// </summary>
-        public double Price
-        {
-            get => _price;
-            set => _price = 7.32;
-        }
+        public double Price => 7.32;
 
         /// <summary>
         /// Calories property of entree item
         /// </summary>
-        public uint Calories
-        {
-            get => _calories;
-            set => _calories = 843;
-        }
+        public uint Calories => 843;
 
         /// <summary>
         /// Special Instructions property of entree item.
         /// </summary>
-        public List<String> SpecialInstructions
+        public List<string> SpecialInstructions
         {
-            get => _specialInstructions;
-            set => _specialInstructions = new List<String> { "Bun", "Ketchup", "Mustard", "Pickle", "Cheese", "Tomato", "Lettuce", "Mayo" };
+            get
+            {
+                List<string> instructions = new List<string>();
+                if (!Bun) instructions.Add("Hold bun");
+                if(!Ketchup) instructions.Add("Hold ketchup");
+                if(!Mustard) instructions.Add("Hold mustard");
+                if(!Pickle) instructions.Add("Hold pickle");
+                if(!Cheese) instructions.Add("Hold cheese");
+                if(!Tomato) instructions.Add("Hold tomato");
+                if(!Lettuce) instructions.Add("Hold lettuce");
+                if(!Mayo) instructions.Add("Hold mayo");
+                return instructions;
+            }
         }
 
-        public List<Boolean> Ingredients
+        public bool Bun { get; set; } = true;
+
+        public bool Ketchup { get; set; } = true;
+
+        public bool Mustard { get; set; } = true;
+
+        public bool Pickle { get; set; } = true;
+
+        public bool Cheese { get; set; } = true;
+
+        public bool Tomato { get; set; } = true;
+
+        public bool Lettuce { get; set; } = true;
+
+        public bool Mayo { get; set; } = true;
+
+        /// <summary>
+        /// Overridden default ToString method.
+        /// </summary>
+        /// <returns></returns>
+        public override string ToString()
         {
-            get => _ingredients;
-            set => _ingredients = new List<Boolean> { true, true, true, true, true, true, true, true };
+            return "Double Draugr";
         }
     }
 }

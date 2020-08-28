@@ -4,17 +4,17 @@ using System.Text;
 
 namespace Data.Entrees
 {
-    class BriarheartBurger
+    class ThalmorTriple
     {
         /// <summary>
         /// Price property of entree item
         /// </summary>
-        public double Price => 6.32;
+        public double Price => 8.32;
 
         /// <summary>
         /// Calories property of entree item
         /// </summary>
-        public uint Calories => 743;
+        public uint Calories => 943;
 
         /// <summary>
         /// Special Instructions property of entree item.
@@ -29,6 +29,11 @@ namespace Data.Entrees
                 if (!Mustard) instructions.Add("Hold mustard");
                 if (!Pickle) instructions.Add("Hold pickle");
                 if (!Cheese) instructions.Add("Hold cheese");
+                if (!Tomato) instructions.Add("Hold tomato");
+                if (!Lettuce) instructions.Add("Hold lettuce");
+                if (!Mayo) instructions.Add("Hold mayo");
+                if (!Bacon) instructions.Add("Hold bacon");
+                if (!Egg) instructions.Add("Hold egg");
                 return instructions;
             }
         }
@@ -43,13 +48,23 @@ namespace Data.Entrees
 
         public bool Cheese { get; set; } = true;
 
+        public bool Tomato { get; set; } = true;
+
+        public bool Lettuce { get; set; } = true;
+
+        public bool Mayo { get; set; } = true;
+
+        public bool Bacon { get; set; } = true;
+
+        public bool Egg { get; set; } = true;
+
         /// <summary>
         /// Overridden default ToString method.
         /// </summary>
         /// <returns></returns>
         public override string ToString()
         {
-            return "Briarheart Burger";
+            return "Thalmor Triple";
         }
     }
 }

@@ -4,17 +4,17 @@ using System.Text;
 
 namespace Data.Entrees
 {
-    class BriarheartBurger
+    class SmokehouseSkeleton
     {
         /// <summary>
         /// Price property of entree item
         /// </summary>
-        public double Price => 6.32;
+        public double Price => 4.57;
 
         /// <summary>
         /// Calories property of entree item
         /// </summary>
-        public uint Calories => 743;
+        public uint Calories => 404;
 
         /// <summary>
         /// Special Instructions property of entree item.
@@ -24,24 +24,22 @@ namespace Data.Entrees
             get
             {
                 List<string> instructions = new List<string>();
-                if (!Bun) instructions.Add("Hold bun");
-                if (!Ketchup) instructions.Add("Hold ketchup");
-                if (!Mustard) instructions.Add("Hold mustard");
-                if (!Pickle) instructions.Add("Hold pickle");
-                if (!Cheese) instructions.Add("Hold cheese");
+                if (!SausageLink) instructions.Add("Hold sausage");
+                if (!Egg) instructions.Add("Hold eggs");
+                if (!HashBrowns) instructions.Add("Hold hash browns");
+                if (!Pancake) instructions.Add("Hold pancakes");
                 return instructions;
             }
         }
 
-        public bool Bun { get; set; } = true;
+        public bool SausageLink { get; set; } = true;
 
-        public bool Ketchup { get; set; } = true;
+        public bool Egg { get; set; } = true;
 
-        public bool Mustard { get; set; } = true;
+        public bool HashBrowns { get; set; } = true;
 
-        public bool Pickle { get; set; } = true;
+        public bool Pancake { get; set; } = true;
 
-        public bool Cheese { get; set; } = true;
 
         /// <summary>
         /// Overridden default ToString method.
@@ -49,7 +47,7 @@ namespace Data.Entrees
         /// <returns></returns>
         public override string ToString()
         {
-            return "Briarheart Burger";
+            return "Smokehouse Skeleton";
         }
     }
 }
