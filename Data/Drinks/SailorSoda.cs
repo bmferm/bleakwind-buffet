@@ -1,4 +1,10 @@
-﻿using BleakwindBuffet.Data.Enums;
+﻿/*
+* Author: Brittany "Chelle" Ferm
+* Class name: SailorSoda.cs
+* Purpose: To set properties and conditions of the Sailor Soda drink
+*/
+
+using BleakwindBuffet.Data.Enums;
 using Data.Enums;
 using System;
 using System.Collections.Generic;

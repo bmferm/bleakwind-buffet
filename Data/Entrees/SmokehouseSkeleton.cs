@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+* Author: Brittany "Chelle" Ferm
+* Class name: SmokehouseSkeleton.cs
+* Purpose: To set properties and conditions of the Smokehouse Skeleton entree
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 

@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+* Author: Brittany "Chelle" Ferm
+* Class name: PhillyPoacher.cs
+* Purpose: To set properties and conditions of the Philly Poacher entree
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 

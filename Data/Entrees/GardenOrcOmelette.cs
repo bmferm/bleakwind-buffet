@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+* Author: Brittany "Chelle" Ferm
+* Class name: GardenOrcOmelette.cs
+* Purpose: To set properties and conditions of the Garden Orc Omelette entree
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 

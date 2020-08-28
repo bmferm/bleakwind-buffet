@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+* Author: Brittany "Chelle" Ferm
+* Class name: ThugsTBone.cs
+* Purpose: To set properties and conditions of the Thugs T-Bone entree
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 

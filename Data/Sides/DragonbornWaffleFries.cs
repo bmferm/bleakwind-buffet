@@ -1,4 +1,10 @@
-﻿using BleakwindBuffet.Data.Enums;
+﻿/*
+* Author: Brittany "Chelle" Ferm
+* Class name: DragonbornWaffleFries.cs
+* Purpose: To set properties and conditions of the Dragonborn Waffle Fries side
+*/
+
+using BleakwindBuffet.Data.Enums;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -54,7 +60,7 @@ namespace Data.Sides
         }
 
         /// <summary>
-        /// Override ToString method to print out size and flavor of drink
+        /// Override ToString method to print out size of side
         /// </summary>
         /// <returns></returns>
         public override string ToString()

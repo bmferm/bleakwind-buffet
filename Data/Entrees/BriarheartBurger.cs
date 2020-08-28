@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+* Author: Brittany "Chelle" Ferm
+* Class name: BriarheartBurger.cs
+* Purpose: To set properties and conditions of the Briarheart Burger entree
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 

@@ -1,4 +1,10 @@
-﻿using BleakwindBuffet.Data.Enums;
+﻿/*
+* Author: Brittany "Chelle" Ferm
+* Class name: MarkarthMilk.cs
+* Purpose: To set properties and conditions of the Markarth Milk drink
+*/
+
+using BleakwindBuffet.Data.Enums;
 using System;
 using System.Collections.Generic;
 using System.Text;

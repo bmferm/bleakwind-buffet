@@ -1,4 +1,10 @@
-﻿using BleakwindBuffet.Data.Enums;
+﻿/*
+* Author: Brittany "Chelle" Ferm
+* Class name: AretinoAppleJuice.cs
+* Purpose: To set properties and conditions of the Aretino Apple Juice drink
+*/
+
+using BleakwindBuffet.Data.Enums;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -60,7 +66,7 @@ namespace Data.Drinks
         }
 
         /// <summary>
-        /// Override ToString method to print out size and flavor of drink
+        /// Override ToString method to print out size of drink
         /// </summary>
         /// <returns></returns>
         public override string ToString()

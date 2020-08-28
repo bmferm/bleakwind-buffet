@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+* Author: Brittany "Chelle" Ferm
+* Class name: DoubleDraugr.cs
+* Purpose: To set properties and conditions of the Double Draugr entree
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 

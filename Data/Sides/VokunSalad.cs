@@ -1,4 +1,10 @@
-﻿using BleakwindBuffet.Data.Enums;
+﻿/*
+* Author: Brittany "Chelle" Ferm
+* Class name: VokunSalad.cs
+* Purpose: To set properties and conditions of the VokunSalad side
+*/
+
+using BleakwindBuffet.Data.Enums;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -54,7 +60,7 @@ namespace Data.Sides
         }
 
         /// <summary>
-        /// Override ToString method to print out size and flavor of drink
+        /// Override ToString method to print out size of side
         /// </summary>
         /// <returns></returns>
         public override string ToString()
