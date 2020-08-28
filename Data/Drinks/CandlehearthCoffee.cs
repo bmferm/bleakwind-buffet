@@ -79,6 +79,7 @@ namespace Data.Drinks
         {
             if (!Decaf) return _size + " Candlehearth Coffee";
             if (Decaf) return _size + " Decaf Candlehearth Coffee";
+            else throw new NotImplementedException();
         }
     }
 }

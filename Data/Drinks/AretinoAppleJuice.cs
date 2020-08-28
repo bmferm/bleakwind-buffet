@@ -44,7 +44,7 @@ namespace Data.Drinks
         /// <summary>
         /// Get if there should be ice in the drink
         /// </summary>
-        public bool Ice { get; set; };
+        public bool Ice { get; set; }
 
         /// <summary>
         /// Set any special instructions in list
