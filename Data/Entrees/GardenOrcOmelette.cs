@@ -10,7 +10,7 @@ using System.Text;
 
 namespace BleakwindBuffet.Data.Entrees
 {
-    class GardenOrcOmelette
+    public class GardenOrcOmelette
     {
         /// <summary>
         /// Price property of entree item

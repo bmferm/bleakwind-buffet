@@ -11,7 +11,7 @@ using System.Text;
 
 namespace BleakwindBuffet.Data.Sides
 {
-    class VokunSalad
+    public class VokunSalad
     {
         private Size _size = Size.Small; // default size
         /// <summary>

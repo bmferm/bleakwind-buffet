@@ -5,16 +5,14 @@
 */
 
 using BleakwindBuffet.Data.Enums;
-using Data.Enums;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace BleakwindBuffet.Data.Drinks
 {
-    class SailorSoda
+    public class SailorSoda
     {
-
         private Size _size = Size.Small; // default size
         /// <summary>
         /// Get the size of the drink
