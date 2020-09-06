@@ -10,22 +10,75 @@ using System.Text;
 
 namespace BleakwindBuffet.Data.Entrees
 {
+    /// <summary>
+    /// Class represents Double Draugr entree.
+    /// </summary>
     public class DoubleDraugr
     {
 
-        /// <summary>
-        /// Price property of entree item
-        /// </summary>
+        /// <value>
+        /// Price of the entree item.
+        /// </value>
         public double Price => 7.32;
 
-        /// <summary>
-        /// Calories property of entree item
-        /// </summary>
+        /// <value>
+        /// Calories of the entree item
+        /// </value>
         public uint Calories => 843;
 
+        /// <value>
+        /// If entree is prepared with bun.
+        /// </value>
+        /// <remarks>Default set to true.</remarks>
+        public bool Bun { get; set; } = true;
+
+        /// <value>
+        /// If entree is prepared with ketchup.
+        /// </value>
+        /// <remarks>Default set to true.</remarks>
+        public bool Ketchup { get; set; } = true;
+
+        /// <value>
+        /// If entree is prepared with mustard.
+        /// </value>
+        /// <remarks>Default set to true.</remarks>
+        public bool Mustard { get; set; } = true;
+
+        /// <value>
+        /// If entree is prepared with pickles.
+        /// </value>
+        /// <remarks>Default set to true.</remarks>
+        public bool Pickle { get; set; } = true;
+
+        /// <value>
+        /// If entree is prepared with cheese.
+        /// </value>
+        /// <remarks>Default set to true.</remarks>
+        public bool Cheese { get; set; } = true;
+
+        /// <value>
+        /// If entree is prepared with tomato.
+        /// </value>
+        /// <remarks>Default set to true.</remarks>
+        public bool Tomato { get; set; } = true;
+
+        /// <value>
+        /// If entree is prepared with lettuce.
+        /// </value>
+        /// <remarks>Default set to true.</remarks>
+        public bool Lettuce { get; set; } = true;
+
+        /// <value>
+        /// If entree is prepared with mayo.
+        /// </value>
+        /// <remarks>Default set to true.</remarks>
+        public bool Mayo { get; set; } = true;
+
         /// <summary>
-        /// Special Instructions property of entree item.
+        /// Returns description of the entree.
         /// </summary>
+        /// <returns>A string describing the drink.</returns>
+        /// <remarks>Overrides default ToString method.</remarks>
         public List<string> SpecialInstructions
         {
             get
@@ -43,26 +96,11 @@ namespace BleakwindBuffet.Data.Entrees
             }
         }
 
-        public bool Bun { get; set; } = true;
-
-        public bool Ketchup { get; set; } = true;
-
-        public bool Mustard { get; set; } = true;
-
-        public bool Pickle { get; set; } = true;
-
-        public bool Cheese { get; set; } = true;
-
-        public bool Tomato { get; set; } = true;
-
-        public bool Lettuce { get; set; } = true;
-
-        public bool Mayo { get; set; } = true;
-
         /// <summary>
-        /// Overridden default ToString method.
+        /// Returns description of the entree.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>A string describing the entree.</returns>
+        /// <remarks>Overrides default ToString method.</remarks>
         public override string ToString()
         {
             return "Double Draugr";

@@ -10,21 +10,24 @@ using System.Text;
 
 namespace BleakwindBuffet.Data.Entrees
 {
+    /// <summary>
+    /// Class representing Thugs T-Bone entree.
+    /// </summary>
     public class ThugsTBone
     {
-        /// <summary>
-        /// Price property of entree item
-        /// </summary>
+        /// <value>
+        /// Price of the entree item.
+        /// </value>
         public double Price => 6.44;
 
-        /// <summary>
-        /// Calories property of entree item
-        /// </summary>
+        /// <value>
+        /// Calories of the entree item.
+        /// </value>
         public uint Calories => 982;
 
-        /// <summary>
-        /// Special Instructions property of entree item.
-        /// </summary>
+        /// <value>
+        /// List of special instructions for preparing the entree.
+        /// </value>
         public List<string> SpecialInstructions
         {
             get
@@ -34,12 +37,11 @@ namespace BleakwindBuffet.Data.Entrees
             }
         }
 
-
-
         /// <summary>
-        /// Overridden default ToString method.
+        /// Returns description of the entree.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>A string describing the entree.</returns>
+        /// <remarks>Overrides default ToString method.</remarks>
         public override string ToString()
         {
             return "Thugs T-Bone";

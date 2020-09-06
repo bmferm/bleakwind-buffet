@@ -11,17 +11,25 @@ using System.Text;
 
 namespace BleakwindBuffet.Data.Drinks
 {
+    /// <summary>
+    /// Class for representing the Aretino Apple Juice drink.
+    /// </summary>
     public class AretinoAppleJuice
     {
-        private Size _size = Size.Small; // default size
-        /// <summary>
-        /// Get the size of the drink
-        /// </summary>
-        public Size Size { get { return _size; } set { _size = value; } }
+        /* Private variable declaration for the drink */
+        private Size _size = Size.Small; // Size Small is set as the default size of drink.
 
-        /// <summary>
-        /// Get the prie of the drink based on the size
-        /// </summary>
+        /// <value>
+        /// Get the size of the drink.
+        /// </value>
+        public Size Size { 
+            get { return _size; } 
+            set { _size = value; }
+        }
+
+        /// <value>
+        /// Price of the drink based on the size.
+        /// </value>
         public double Price
         {
             get
@@ -33,9 +41,9 @@ namespace BleakwindBuffet.Data.Drinks
             }
         }
 
-        /// <summary>
-        /// Get the calories of the drink based on size
-        /// </summary>
+        /// <value>
+        /// Calories of the drink based on size.
+        /// </value>
         public uint Calories
         {
             get
@@ -47,14 +55,14 @@ namespace BleakwindBuffet.Data.Drinks
             }
         }
 
-        /// <summary>
-        /// Get if there should be ice in the drink
-        /// </summary>
+        /// <value>
+        /// If drink is served with ice.
+        /// </value>
         public bool Ice { get; set; }
 
-        /// <summary>
-        /// Set any special instructions in list
-        /// </summary>
+        /// <value>
+        /// List of special instructions for preparing the drink.
+        /// </value>
         public List<string> SpecialInstructions
         {
             get
@@ -66,9 +74,10 @@ namespace BleakwindBuffet.Data.Drinks
         }
 
         /// <summary>
-        /// Override ToString method to print out size of drink
+        /// Returns description of the drink.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>A string describing the drink.</returns>
+        /// <remarks>Overrides default ToString method.</remarks>
         public override string ToString()
         {
             return _size + " " + "Aretino Apple Juice";

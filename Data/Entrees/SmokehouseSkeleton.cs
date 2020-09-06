@@ -10,21 +10,48 @@ using System.Text;
 
 namespace BleakwindBuffet.Data.Entrees
 {
+    /// <summary>
+    /// Class representing Smokehouse Skeleton entree.
+    /// </summary>
     public class SmokehouseSkeleton
     {
-        /// <summary>
-        /// Price property of entree item
-        /// </summary>
+        /// <value>
+        /// Price of the entree item.
+        /// </value>
         public double Price => 4.57;
 
-        /// <summary>
-        /// Calories property of entree item
+        /// <value>
+        /// Calories of th eentree item
         /// </summary>
         public uint Calories => 404;
 
-        /// <summary>
-        /// Special Instructions property of entree item.
-        /// </summary>
+        /// <value>
+        /// If entree is prepared with sausage links.
+        /// </value>
+        /// <remarks>Default set to true.</remarks>
+        public bool SausageLink { get; set; } = true;
+
+        /// <value>
+        /// If entree is prepared with eggs.
+        /// </value>
+        /// <remarks>Default set to true.</remarks>
+        public bool Egg { get; set; } = true;
+
+        /// <value>
+        /// If entree is prepared with hash browns.
+        /// </value>
+        /// <remarks>Default set to true.</remarks>
+        public bool HashBrowns { get; set; } = true;
+
+        /// <value>
+        /// If entree is prepared with pancakes.
+        /// </value>
+        /// <remarks>Default set to true.</remarks>
+        public bool Pancake { get; set; } = true;
+
+        /// <value>
+        /// List of special instructions for preparing the entree.
+        /// </value>
         public List<string> SpecialInstructions
         {
             get
@@ -38,19 +65,11 @@ namespace BleakwindBuffet.Data.Entrees
             }
         }
 
-        public bool SausageLink { get; set; } = true;
-
-        public bool Egg { get; set; } = true;
-
-        public bool HashBrowns { get; set; } = true;
-
-        public bool Pancake { get; set; } = true;
-
-
         /// <summary>
-        /// Overridden default ToString method.
+        /// Returns description of the entree.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>A string describing the entree.</returns>
+        /// <remarks>Overrides default ToString method.</remarks>
         public override string ToString()
         {
             return "Smokehouse Skeleton";

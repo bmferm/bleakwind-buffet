@@ -10,21 +10,48 @@ using System.Text;
 
 namespace BleakwindBuffet.Data.Entrees
 {
+    /// <summary>
+    /// Class representing Garden Orc Omelette entree.
+    /// </summary>
     public class GardenOrcOmelette
     {
-        /// <summary>
-        /// Price property of entree item
-        /// </summary>
+        /// <value>
+        /// Price of the entree item.
+        /// </value>
         public double Price => 4.57;
 
-        /// <summary>
-        /// Calories property of entree item
-        /// </summary>
+        /// <value>
+        /// Calories of the entree item.
+        /// </value>
         public uint Calories => 404;
 
-        /// <summary>
-        /// Special Instructions property of entree item.
-        /// </summary>
+        /// <value>
+        /// If entree is prepared with broccoli.
+        /// </value>
+        /// <remarks>Default set to true.</remarks>
+        public bool Broccoli { get; set; } = true;
+
+        /// <value>
+        /// If entree is prepared with mushrooms.
+        /// </value>
+        /// <remarks>Default set to true.</remarks>
+        public bool Mushrooms { get; set; } = true;
+
+        /// <value>
+        /// If entree is prepared with tomato.
+        /// </value>
+        /// <remarks>Default set to true.</remarks>
+        public bool Tomato { get; set; } = true;
+
+        /// <value>
+        /// If entree is prepared with cheddar.
+        /// </value>
+        /// <remarks>Default set to true.</remarks>
+        public bool Cheddar { get; set; } = true;
+
+        /// <value>
+        /// List of special instructions for preparing the entree.
+        /// </value>
         public List<string> SpecialInstructions
         {
             get
@@ -38,19 +65,11 @@ namespace BleakwindBuffet.Data.Entrees
             }
         }
 
-        public bool Broccoli { get; set; } = true;
-
-        public bool Mushrooms { get; set; } = true;
-
-        public bool Tomato { get; set; } = true;
-
-        public bool Cheddar { get; set; } = true;
-
-
         /// <summary>
-        /// Overridden default ToString method.
+        /// Returns description of the entree.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>A string describing the entree.</returns>
+        /// <remarks>Overrides default ToString method.</remarks>
         public override string ToString()
         {
             return "Garden Orc Omelette";

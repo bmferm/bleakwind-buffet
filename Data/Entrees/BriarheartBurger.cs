@@ -10,21 +10,54 @@ using System.Text;
 
 namespace BleakwindBuffet.Data.Entrees
 {
+    /// <summary>
+    /// Class representing Briarheart Burger entree.
+    /// </summary>
     public class BriarheartBurger
     {
-        /// <summary>
-        /// Price property of entree item
-        /// </summary>
+        /// <value>
+        /// Price of the entree item.
+        /// </value>
         public double Price => 6.32;
 
-        /// <summary>
-        /// Calories property of entree item
-        /// </summary>
+        /// <value>
+        /// Calories of the entree item.
+        /// </value>
         public uint Calories => 743;
 
-        /// <summary>
-        /// Special Instructions property of entree item.
-        /// </summary>
+        /// <value>
+        /// If entree is prepared with bun.
+        /// </value>
+        /// <remarks>Default set to true.</remarks>
+        public bool Bun { get; set; } = true;
+
+        /// <value>
+        /// If entree is prepared with ketchup.
+        /// </value>
+        /// <remarks>Default set to true.</remarks>
+        public bool Ketchup { get; set; } = true;
+
+        /// <value>
+        /// If entree is prepared with mustard.
+        /// </value>
+        /// <remarks>Default set to true.</remarks>
+        public bool Mustard { get; set; } = true;
+
+        /// <value>
+        /// If entree is prepared with pickle.
+        /// </value>
+        /// <remarks>Default set to true.</remarks>
+        public bool Pickle { get; set; } = true;
+
+        /// <value>
+        /// If entree is prepared with cheese.
+        /// </value>
+        /// <remarks>Default set to true.</remarks>
+        public bool Cheese { get; set; } = true;
+
+        /// <value>
+        /// List of special instructions for preparing the entree.
+        /// </value>
         public List<string> SpecialInstructions
         {
             get
@@ -39,20 +72,11 @@ namespace BleakwindBuffet.Data.Entrees
             }
         }
 
-        public bool Bun { get; set; } = true;
-
-        public bool Ketchup { get; set; } = true;
-
-        public bool Mustard { get; set; } = true;
-
-        public bool Pickle { get; set; } = true;
-
-        public bool Cheese { get; set; } = true;
-
         /// <summary>
-        /// Overridden default ToString method.
+        /// Returns description of the entree.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>A string describing the entree.</returns>
+        /// <remarks>Overrides default ToString method.</remarks>
         public override string ToString()
         {
             return "Briarheart Burger";

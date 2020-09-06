@@ -7,7 +7,7 @@
 namespace BleakwindBuffet.Data.Enums
 {
     /// <summary>
-    /// Provides available sizes
+    /// Enum for Size of menu item.
     /// </summary>
     public enum Size
     {

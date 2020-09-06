@@ -11,17 +11,25 @@ using System.Text;
 
 namespace BleakwindBuffet.Data.Sides
 {
+    /// <summary>
+    /// Class representing Vokun Salad side.
+    /// </summary>
     public class VokunSalad
     {
-        private Size _size = Size.Small; // default size
-        /// <summary>
-        /// Get the size of the side
-        /// </summary>
-        public Size Size { get { return _size; } set { _size = value; } }
+        /* Private declaration for the side. */
+        private Size _size = Size.Small; // Size Small set to default size.
 
-        /// <summary>
-        /// Get the prie of the side based on the size
-        /// </summary>
+        /// <value>
+        /// Size of the side.
+        /// </value>
+        public Size Size {
+            get { return _size; }
+            set { _size = value; }
+        }
+
+        /// <value>
+        /// Price of the side based on the size.
+        /// </value>
         public double Price
         {
             get
@@ -33,9 +41,9 @@ namespace BleakwindBuffet.Data.Sides
             }
         }
 
-        /// <summary>
-        /// Get the calories of the side based on size
-        /// </summary>
+        /// <value>
+        /// Calories of the side based on size.
+        /// </value>
         public uint Calories
         {
             get
@@ -47,9 +55,10 @@ namespace BleakwindBuffet.Data.Sides
             }
         }
 
-        /// <summary>
-        /// Set any special instructions in list
-        /// </summary>
+        /// <value>
+        /// List of special instructions for preparing the entree.
+        /// </value>
+        /// <remarks>Special Instructions set to empty list.</remarks>
         public List<string> SpecialInstructions
         {
             get
@@ -60,9 +69,10 @@ namespace BleakwindBuffet.Data.Sides
         }
 
         /// <summary>
-        /// Override ToString method to print out size of side
+        /// Returns description of the side.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>A string describing the side.</returns>
+        /// <remarks>Overrides default ToString method.</remarks>
         public override string ToString()
         {
             return _size + " Vokun Salad";
