@@ -55,7 +55,11 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
         [InlineData(Size.Large, 1.01)]
         public void ShouldHaveCorrectPriceForSize(Size size, double price)
         {
-            AretinoAppleJuice drink = new AretinoAppleJuice();
+            AretinoAppleJuice drink = new AretinoAppleJuice()
+            {
+                Size = size
+            };
+            Assert.Equal(price, drink.Price);
 
         }
 
@@ -65,6 +69,11 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
         [InlineData(Size.Large, 132)]
         public void ShouldHaveCorrectCaloriesForSize(Size size, uint cal)
         {
+            AretinoAppleJuice drink = new AretinoAppleJuice()
+            {
+                Size = size
+            };
+            Assert.Equal(cal, drink.Calories);
         }
 
         [Theory]
@@ -72,6 +81,11 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
         [InlineData(false)]
         public void ShouldHaveCorrectSpecialInstructions(bool includeIce)
         {
+            AretinoAppleJuice drink = new AretinoAppleJuice()
+            {
+                Ice = includeIce
+            };
+            if (includeIce) Assert.Contains("Add ice", drink.SpecialInstructions);
         }
 
         [Theory]
@@ -80,6 +94,16 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
         [InlineData(Size.Large, "Large Aretino Apple Juice")]
         public void ShouldReturnCorrectToStringBasedOnSize(Size size, string name)
         {
+            string expectedName = "";
+            AretinoAppleJuice drink = new AretinoAppleJuice()
+            {
+                Size = size
+            };
+            if (size == Size.Small) expectedName = "Small Aretino Apple Juice";
+            if (size == Size.Medium) expectedName = "Medium Aretino Apple Juice";
+            if (size == Size.Large) expectedName = "Large Aretino Apple Juice";
+
+            Assert.Equal(expectedName, name);
         }
     }
 }
