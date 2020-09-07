@@ -30,6 +30,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <value>
         /// Price of the drink based on the size.
         /// </value>
+        /// <exception cref="NotImplementedException"></exception>
         public double Price
         {
             get
@@ -44,6 +45,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <value>
         /// Calories of the drink based on the size.
         /// </value>
+        /// <exception cref="NotImplementedException"></exception>
         public uint Calories
         {
             get
@@ -89,6 +91,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// Returns description of the drink.
         /// </summary>
         /// <returns>A string describing the drink.</returns>
+        /// <exception cref="NotImplementedException"></exception>
         /// <remarks>Overrides default ToString method.</remarks>
         public override string ToString()
         {
