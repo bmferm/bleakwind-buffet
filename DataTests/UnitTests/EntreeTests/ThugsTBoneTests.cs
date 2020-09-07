@@ -5,7 +5,8 @@
  */
 using Xunit;
 
-using BleakwindBuffet.Data;
+using BleakwindBuffet.Data.Entrees;
+using System.Collections.Generic;
 
 namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
 {
@@ -14,21 +15,30 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         [Fact]
         public void ShouldReturnCorrectPrice()
         {
+            ThugsTBone entree = new ThugsTBone();
+            Assert.Equal(6.44, entree.Price);
         }
 
         [Fact]
         public void ShouldReturnCorrectCalories()
         {
+            ThugsTBone entree = new ThugsTBone();
+            Assert.Equal(982, (double)entree.Calories);
         }
 
         [Fact]
         public void ShouldReturnCorrectSpecialInstructions()
         {
+            List<string> instructions = new List<string>();
+            ThugsTBone entree = new ThugsTBone();
+            Assert.Equal(instructions, entree.SpecialInstructions);
         }
 
         [Fact]
         public void ShouldReturnCorrectToString()
         {
+            ThugsTBone entree = new ThugsTBone();
+            Assert.Equal("Thugs T-Bone", entree.ToString());
         }
     }
 }
