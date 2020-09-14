@@ -9,6 +9,13 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
     public class WarriorWaterTests
     {
         [Fact]
+        public void ShouldBeADrink()
+        {
+            WarriorWater drink = new WarriorWater();
+            Assert.IsAssignableFrom<Drink>(drink);
+        }
+
+        [Fact]
         public void ShouldIncludeIceByDefault()
         {
             WarriorWater drink = new WarriorWater();
@@ -101,10 +108,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
         public void ShouldReturnCorrectToStringBasedOnSize(Size size, string name)
         {
             string expectedName = "";
-            WarriorWater drink = new WarriorWater()
-            {
-                Size = size
-            };
+
             if (size == Size.Small) expectedName = "Small Warrior Water";
             if (size == Size.Medium) expectedName = "Medium Warrior Water";
             if (size == Size.Large) expectedName = "Large Warrior Water";

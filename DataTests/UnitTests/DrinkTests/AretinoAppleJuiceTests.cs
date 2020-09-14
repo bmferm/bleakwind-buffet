@@ -14,6 +14,13 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
     public class AretinoAppleJuiceTests
     {
         [Fact]
+        public void ShouldBeADrink()
+        {
+            AretinoAppleJuice drink = new AretinoAppleJuice();
+            Assert.IsAssignableFrom<Drink>(drink);
+        }
+
+        [Fact]
         public void ShouldNotIncludeIceByDefault()
         {
             AretinoAppleJuice drink = new AretinoAppleJuice();
@@ -95,10 +102,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
         public void ShouldReturnCorrectToStringBasedOnSize(Size size, string name)
         {
             string expectedName = "";
-            AretinoAppleJuice drink = new AretinoAppleJuice()
-            {
-                Size = size
-            };
+
             if (size == Size.Small) expectedName = "Small Aretino Apple Juice";
             if (size == Size.Medium) expectedName = "Medium Aretino Apple Juice";
             if (size == Size.Large) expectedName = "Large Aretino Apple Juice";

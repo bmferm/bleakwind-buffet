@@ -14,42 +14,43 @@ namespace BleakwindBuffet.Data.Drinks
     /// <summary>
     /// Class representing Sailor Soda drink.
     /// </summary>
-    public class SailorSoda
+    public class SailorSoda : Drink
     {
         /* Private variable declaration for the drink. */
-        private Size _size = Size.Small; // Size Small set as default size.
+        //private Size _size = Size.Small; // Size Small set as default size.
         private SodaFlavor _flavor = SodaFlavor.Cherry; // Flavor Cherry set as default cherry.
-
-        /// <value>
-        /// Size of the drink.
-        /// </value>
-        public Size Size { get { return _size; } set { _size = value; } }
 
         /// <value>
         /// Price of the drink based on the size.
         /// </value>
-        public double Price
+        public override  double Price
         {
             get 
             {
-                if (_size == Size.Small) return 1.42;
-                if (_size == Size.Medium) return 1.74;
-                if (_size == Size.Large) return 2.07;
-                else throw new NotImplementedException();
+                switch (Size)
+                {
+                    case Size.Small: return 1.42;
+                    case Size.Medium: return 1.74;
+                    case Size.Large: return 2.07;
+                    default: throw new NotImplementedException();
+                }
             }
         }
 
         /// <value>
         /// Calories of the drink based on size.
         /// </value>
-        public uint Calories
+        public override uint Calories
         {
             get
             {
-                if (_size == Size.Small) return 117;
-                if (_size == Size.Medium) return 153;
-                if (_size == Size.Large) return 205;
-                else throw new NotImplementedException();
+                switch (Size)
+                {
+                    case Size.Small: return 117;
+                    case Size.Medium: return 153;
+                    case Size.Large: return 205;
+                    default: throw new NotImplementedException();
+                }
             }
         }
 
@@ -71,7 +72,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <value>
         /// List of special instructions for preparing the drink.
         /// </value>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {
@@ -88,7 +89,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <remarks>Overrides default ToString method.</remarks>
         public override string ToString()
         {
-            return _size + " " + _flavor + " " + "Sailor Soda";
+            return Size + " " + Flavor + " " + "Sailor Soda";
         }
     }
 }

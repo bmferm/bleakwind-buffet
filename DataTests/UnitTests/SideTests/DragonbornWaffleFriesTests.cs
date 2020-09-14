@@ -14,6 +14,13 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
     public class DragonbornWaffleFriesTests
     {
         [Fact]
+        public void ShouldBeASide()
+        {
+            DragonbornWaffleFries side = new DragonbornWaffleFries();
+            Assert.IsAssignableFrom<Side>(side);
+        }
+
+        [Fact]
         public void ShouldBeSmallByDefault()
         {
             DragonbornWaffleFries side = new DragonbornWaffleFries();
@@ -73,10 +80,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
         public void ShouldReturnCorrectToStringBasedOnSize(Size size, string name)
         {
             string expectedName = "";
-            DragonbornWaffleFries side = new DragonbornWaffleFries()
-            {
-                Size = size
-            };
+
             if (size == Size.Small) expectedName = "Small Dragonborn Waffle Fries";
             if (size == Size.Medium) expectedName = "Medium Dragonborn Waffle Fries";
             if (size == Size.Large) expectedName = "Large Dragonborn Waffle Fries";

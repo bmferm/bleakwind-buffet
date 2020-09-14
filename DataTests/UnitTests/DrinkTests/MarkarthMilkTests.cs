@@ -15,6 +15,13 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
     public class MarkarthMilkTests
     {
         [Fact]
+        public void ShouldBeADrink()
+        {
+            MarkarthMilk drink = new MarkarthMilk();
+            Assert.IsAssignableFrom<Drink>(drink);
+        }
+
+        [Fact]
         public void ShouldNotIncludeIceByDefault()
         {
             MarkarthMilk drink = new MarkarthMilk();
@@ -95,10 +102,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
         public void ShouldReturnCorrectToStringBasedOnSize(Size size, string name)
         {
             string expectedName = "";
-            MarkarthMilk drink = new MarkarthMilk()
-            {
-                Size = size
-            };
+
             if (size == Size.Small) expectedName = "Small Markarth Milk";
             if (size == Size.Medium) expectedName = "Medium Markarth Milk";
             if (size == Size.Large) expectedName = "Large Markarth Milk";

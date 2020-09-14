@@ -14,29 +14,21 @@ namespace BleakwindBuffet.Data.Drinks
     /// <summary>
     /// Class representing the Warrior Water drink.
     /// </summary>
-    public class WarriorWater
+    public class WarriorWater : Drink
     {
         /* Private variable declaration for the drink. */
-        private Size _size = Size.Small; // Size Small set as default size.
-
-        /// <value>
-        /// Size of the drink.
-        /// </value>
-        public Size Size {
-            get { return _size; }
-            set { _size = value; }
-        }
+        //private Size _size = Size.Small; // Size Small set as default size.
 
         /// <value>
         /// Price of the drink.
         /// </value>
         /// <remarks>Default price set to $0.00 for all sizes.</remarks>
-        public double Price { get { return 0.00; } }
+        public override double Price { get { return 0.00; } }
 
         /// <value>
         /// Calories of the drink based on size.
         /// </value>
-        public uint Calories { get { return 0; } }
+        public override uint Calories { get { return 0; } }
 
 
         /// <value>
@@ -53,7 +45,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <value>
         /// List of special instructions for preparing the drink.
         /// </value>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {
@@ -71,7 +63,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <remarks>Overrides default ToString method.</remarks>
         public override string ToString()
         {
-            return _size +  " Warrior Water";
+            return Size +  " Warrior Water";
         }
     }
 }

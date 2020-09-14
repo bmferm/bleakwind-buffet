@@ -14,6 +14,13 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
     public class VokunSaladTests
     {
         [Fact]
+        public void ShouldBeASide()
+        {
+            VokunSalad side = new VokunSalad();
+            Assert.IsAssignableFrom<Side>(side);
+        }
+
+        [Fact]
         public void ShouldBeSmallByDefault()
         {
             VokunSalad side = new VokunSalad();
@@ -73,10 +80,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
         public void ShouldReturnCorrectToStringBasedOnSize(Size size, string name)
         {
             string expectedName = "";
-            MadOtarGrits side = new MadOtarGrits()
-            {
-                Size = size
-            };
+
             if (size == Size.Small) expectedName = "Small Vokun Salad";
             if (size == Size.Medium) expectedName = "Medium Vokun Salad";
             if (size == Size.Large) expectedName = "Large Vokun Salad";

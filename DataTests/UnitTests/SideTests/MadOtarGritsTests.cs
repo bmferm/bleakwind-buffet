@@ -14,6 +14,13 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
     public class MadOtarGritsTests
     {
         [Fact]
+        public void ShouldBeASide()
+        {
+            MadOtarGrits side = new MadOtarGrits();
+            Assert.IsAssignableFrom<Side>(side);
+        }
+
+        [Fact]
         public void ShouldBeSmallByDefault()
         {
             MadOtarGrits side = new MadOtarGrits();
@@ -73,10 +80,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
         public void ShouldReturnCorrectToStringBasedOnSize(Size size, string name)
         {
             string expectedName = "";
-            MadOtarGrits side = new MadOtarGrits()
-            {
-                Size = size
-            };
+
             if (size == Size.Small) expectedName = "Small Mad Otar Grits";
             if (size == Size.Medium) expectedName = "Medium Mad Otar Grits";
             if (size == Size.Large) expectedName = "Large Mad Otar Grits";

@@ -7,51 +7,48 @@
 using BleakwindBuffet.Data.Enums;
 using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace BleakwindBuffet.Data.Drinks
 {
     /// <summary>
     /// Class for representing the Aretino Apple Juice drink.
     /// </summary>
-    public class AretinoAppleJuice
+    public class AretinoAppleJuice : Drink
     {
         /* Private variable declaration for the drink */
-        private Size _size = Size.Small; // Size Small is set as the default size of drink.
-
-        /// <value>
-        /// Get the size of the drink.
-        /// </value>
-        public Size Size { 
-            get { return _size; } 
-            set { _size = value; }
-        }
+        //private Size _size = Size.Small; // Size Small is set as the default size of drink.
 
         /// <value>
         /// Price of the drink based on the size.
         /// </value>
-        public double Price
+        public override double Price
         {
             get
             {
-                if (_size == Size.Small) return 0.62;
-                if (_size == Size.Medium) return 0.87;
-                if (_size == Size.Large) return 1.01;
-                else throw new NotImplementedException();
+                switch (Size)
+                {
+                    case Size.Small: return 0.62;
+                    case Size.Medium: return 0.87;
+                    case Size.Large: return 1.01;
+                    default: throw new NotImplementedException();
+                }
             }
         }
 
         /// <value>
         /// Calories of the drink based on size.
         /// </value>
-        public uint Calories
+        public override uint Calories
         {
             get
             {
-                if (_size == Size.Small) return 44;
-                if (_size == Size.Medium) return 88;
-                if (_size == Size.Large) return 132;
-                else throw new NotImplementedException();
+                switch (Size)
+                {
+                    case Size.Small: return 44;
+                    case Size.Medium: return 88;
+                    case Size.Large: return 132;
+                    default: throw new NotImplementedException();
+                }
             }
         }
 
@@ -63,7 +60,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <value>
         /// List of special instructions for preparing the drink.
         /// </value>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {
@@ -80,7 +77,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <remarks>Overrides default ToString method.</remarks>
         public override string ToString()
         {
-            return _size + " " + "Aretino Apple Juice";
+            return Size + " " + "Aretino Apple Juice";
         }
     }
 }

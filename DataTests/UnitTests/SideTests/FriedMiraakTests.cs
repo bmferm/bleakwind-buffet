@@ -14,6 +14,13 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
     public class FriedMiraakTests
     {
         [Fact]
+        public void ShouldBeASide()
+        {
+            FriedMiraak side = new FriedMiraak();
+            Assert.IsAssignableFrom<Side>(side);
+        }
+
+        [Fact]
         public void ShouldBeSmallByDefault()
         {
             FriedMiraak side = new FriedMiraak();
@@ -73,10 +80,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
         public void ShouldReturnCorrectToStringBasedOnSize(Size size, string name)
         {
             string expectedName = "";
-            FriedMiraak side = new FriedMiraak()
-            {
-                Size = size
-            };
+
             if (size == Size.Small) expectedName = "Small Fried Miraak";
             if (size == Size.Medium) expectedName = "Medium Fried Miraak";
             if (size == Size.Large) expectedName = "Large Fried Miraak";

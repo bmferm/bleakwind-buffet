@@ -16,6 +16,13 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
     public class SailorSodaTests
     {
         [Fact]
+        public void ShouldBeADrink()
+        {
+            SailorSoda drink = new SailorSoda();
+            Assert.IsAssignableFrom<Drink>(drink);
+        }
+
+        [Fact]
         public void ShouldIncludeIceByDefault()
         {
             SailorSoda drink = new SailorSoda();
@@ -141,13 +148,8 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
         [InlineData(SodaFlavor.Watermelon, Size.Large, "Large Watermelon Sailor Soda")]
         public void ShouldHaveCorrectToStringBasedOnSizeAndFlavor(SodaFlavor flavor, Size size, string name)
         {
-            string expectedFlavor = "", expectedSize = "", expectedName = "";
+            string expectedFlavor = "", expectedSize = "";
 
-            SailorSoda drink = new SailorSoda()
-            {
-                Flavor = flavor,
-                Size = size
-            };
 
             if (size == Size.Small) expectedSize = "Small ";
             if (size == Size.Medium) expectedSize = "Medium ";
@@ -160,7 +162,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             if (flavor == SodaFlavor.Peach) expectedFlavor = "Peach ";
             if (flavor == SodaFlavor.Watermelon) expectedFlavor = "Watermelon ";
 
-            expectedName = expectedSize + expectedFlavor + "Sailor Soda";
+            string expectedName = expectedSize + expectedFlavor + "Sailor Soda";
 
             Assert.Equal(expectedName, name);
         }

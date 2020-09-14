@@ -14,44 +14,42 @@ namespace BleakwindBuffet.Data.Sides
     /// <summary>
     /// Class representing Mad Otar Grits side.
     /// </summary>
-    public class MadOtarGrits
+    public class MadOtarGrits : Side
     {
         /* Private variable declaration for the side. */
-        private Size _size = Size.Small; // Size Small set as default size.
-
-        /// <value>
-        /// Size of the side.
-        /// </value>
-        public Size Size {
-            get { return _size; }
-            set { _size = value; }
-        }
+        //private Size _size = Size.Small; // Size Small set as default size.
 
         /// <value>
         /// Price of the side based on the size.
         /// </value>
-        public double Price
+        public override double Price
         {
             get
             {
-                if (_size == Size.Small) return 1.22;
-                if (_size == Size.Medium) return 1.58;
-                if (_size == Size.Large) return 1.93;
-                else throw new NotImplementedException();
+                switch (Size)
+                {
+                    case Size.Small: return 1.22;
+                    case Size.Medium: return 1.58;
+                    case Size.Large: return 1.93;
+                    default: throw new NotImplementedException();
+                }
             }
         }
 
         /// <value>
         /// Calories of the side based on size
         /// </value>
-        public uint Calories
+        public override uint Calories
         {
             get
             {
-                if (_size == Size.Small) return 105;
-                if (_size == Size.Medium) return 142;
-                if (_size == Size.Large) return 179;
-                else throw new NotImplementedException();
+                switch (Size)
+                {
+                    case Size.Small: return 105;
+                    case Size.Medium: return 142;
+                    case Size.Large: return 179;
+                    default: throw new NotImplementedException();
+                }
             }
         }
 
@@ -59,7 +57,7 @@ namespace BleakwindBuffet.Data.Sides
         /// List of special instructions for preparing the entree.
         /// </value>
         /// <remarks>Special Instructions set to empty list.</remarks>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {
@@ -75,7 +73,7 @@ namespace BleakwindBuffet.Data.Sides
         /// <remarks>Overrides default ToString method.</remarks>
         public override string ToString()
         {
-            return _size + " Mad Otar Grits";
+            return Size + " Mad Otar Grits";
         }
     }
 }

@@ -14,44 +14,42 @@ namespace BleakwindBuffet.Data.Sides
     /// <summary>
     /// Class representing Fried Miraak side.
     /// </summary>
-    public class FriedMiraak
+    public class FriedMiraak : Side
     {
         /* Private variable declaration for the side. */
-        private Size _size = Size.Small; // Size Small set as default size.
-
-        /// <value>
-        /// Size of the side.
-        /// </value>
-        public Size Size {
-            get { return _size; }
-            set { _size = value; }
-        }
+        //private Size _size = Size.Small; // Size Small set as default size.
 
         /// <value>
         /// Price of the side based on the size.
         /// </value>
-        public double Price
+        public override double Price
         {
             get
             {
-                if (_size == Size.Small) return 1.78;
-                if (_size == Size.Medium) return 2.01;
-                if (_size == Size.Large) return 2.88;
-                else throw new NotImplementedException();
+                switch (Size)
+                {
+                    case Size.Small: return 1.78;
+                    case Size.Medium: return 2.01;
+                    case Size.Large: return 2.88;
+                    default: throw new NotImplementedException();
+                }
             }
         }
 
         /// <value>
         /// Calories of the side based on size.
         /// </value>
-        public uint Calories
+        public override uint Calories
         {
             get
             {
-                if (_size == Size.Small) return 151;
-                if (_size == Size.Medium) return 236;
-                if (_size == Size.Large) return 306;
-                else throw new NotImplementedException();
+                switch (Size)
+                {
+                    case Size.Small: return 151;
+                    case Size.Medium: return 236;
+                    case Size.Large: return 306;
+                    default: throw new NotImplementedException();
+                }
             }
         }
 
@@ -59,7 +57,7 @@ namespace BleakwindBuffet.Data.Sides
         /// List of special instructions for preparing the entree.
         /// </value>
         /// <remarks>Special Instructions set to empty list.</remarks>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {
@@ -75,7 +73,7 @@ namespace BleakwindBuffet.Data.Sides
         /// <remarks>Overrides default ToString method.</remarks>
         public override string ToString()
         {
-            return _size + " Fried Miraak";
+            return Size + " Fried Miraak";
         }
     }
 }

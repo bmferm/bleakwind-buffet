@@ -14,6 +14,13 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
     public class CandlehearthCoffeeTests
     {
         [Fact]
+        public void ShouldBeADrink()
+        {
+            CandlehearthCoffee drink = new CandlehearthCoffee();
+            Assert.IsAssignableFrom<Drink>(drink);
+        }
+
+        [Fact]
         public void ShouldNotIncludeIceByDefault()
         {
             CandlehearthCoffee drink = new CandlehearthCoffee();
@@ -138,22 +145,16 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
         [InlineData(false, Size.Large, "Large Candlehearth Coffee")]
         public void ShouldReturnCorrectToStringBasedOnSize(bool decaf, Size size, string name)
         {
-            string expectedName = "";
             string expectedSize = "";
             string expectedDecaf = "";
 
-            CandlehearthCoffee drink = new CandlehearthCoffee()
-            {
-                Size = size,
-                Decaf = decaf
-            };
             if (size == Size.Small) expectedSize = "Small ";
             if (size == Size.Medium) expectedSize = "Medium ";
             if (size == Size.Large) expectedSize = "Large ";
 
             if (decaf) expectedDecaf = "Decaf ";
 
-            expectedName = expectedSize + expectedDecaf + "Candlehearth Coffee";
+            string expectedName = expectedSize + expectedDecaf + "Candlehearth Coffee";
 
             Assert.Equal(expectedName, name);
         }

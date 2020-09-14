@@ -13,17 +13,17 @@ namespace BleakwindBuffet.Data.Entrees
     /// <summary>
     /// Class representing Garden Orc Omelette entree.
     /// </summary>
-    public class GardenOrcOmelette
+    public class GardenOrcOmelette : Entree
     {
         /// <value>
         /// Price of the entree item.
         /// </value>
-        public double Price => 4.57;
+        public override double Price => 4.57;
 
         /// <value>
         /// Calories of the entree item.
         /// </value>
-        public uint Calories => 404;
+        public override uint Calories => 404;
 
         /// <value>
         /// If entree is prepared with broccoli.
@@ -52,7 +52,7 @@ namespace BleakwindBuffet.Data.Entrees
         /// <value>
         /// List of special instructions for preparing the entree.
         /// </value>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {
