@@ -1,4 +1,10 @@
-﻿using BleakwindBuffet.Data.Entrees;
+﻿/*
+* Author: Brittany "Chelle" Ferm
+* Class name: Menu.cs
+* Purpose: Creating categorized lists of the items on the menu.
+*/
+
+using BleakwindBuffet.Data.Entrees;
 using BleakwindBuffet.Data.Sides;
 using BleakwindBuffet.Data.Enums;
 using System;

@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+* Author: Brittany "Chelle" Ferm
+* Class name: Entree.cs
+* Purpose: Base class for the entrees on the menu.
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 

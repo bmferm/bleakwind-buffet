@@ -1,10 +1,19 @@
-﻿using BleakwindBuffet.Data.Enums;
+﻿/*
+* Author: Brittany "Chelle" Ferm
+* Class name: Side.cs
+* Purpose: Base class for the sides on the menu.
+*/
+
+using BleakwindBuffet.Data.Enums;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace BleakwindBuffet.Data.Sides
 {
+    /// <summary>
+    /// Abstract base class for sides that inherits from IOrderItem.
+    /// </summary>
     public abstract class Side : IOrderItem
     {
         /// <summary>

@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+* Author: Brittany "Chelle" Ferm
+* Class name: IOrderItem.cs
+* Purpose: Interface for items that can be ordered off the menu.
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 
