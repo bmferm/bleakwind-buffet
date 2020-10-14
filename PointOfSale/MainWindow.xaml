@@ -5,63 +5,179 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PointOfSale"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    
-    <Grid Margin="10,10,10,10">
-        
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="Auto"/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-        </Grid.RowDefinitions>
-        
-        <Grid Grid.Column="0" Margin="10,10,10,10">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="100"/>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
-        </Grid>
-        
-        <Grid Grid.Column="1" Margin="10,10,10,10">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="500"/>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions></Grid.RowDefinitions>
-        </Grid>
-        
-        <Grid Grid.Column="2" Margin="10,10,10,10">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="100"/>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="335"/>
-                <RowDefinition Height="50"/>
-            </Grid.RowDefinitions>
-        </Grid>
+        Title="Bleakwind Buffet" Height="450" Width="800">
 
-        <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">
-            <Button x:Name="WalkInButton" 
+    <Grid Margin="10,10,10,10">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="3.5*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" x:Name="orderOptionStack">
+            <Button x:Name="entreesBttn" 
+                Height="30" Width="100"
+                Content="Entrees"
+                Margin="5,5,5,5"
+                HorizontalAlignment="Left" Click="entreesBttn_Click">
+            </Button>
+            <Button x:Name="sidesBttn" 
+                Height="30" Width="100"
+                Content="Sides"
+                Margin="5,5,5,5"
+                HorizontalAlignment="Left" Click="sidesBttn_Click">
+            </Button>
+            <Button x:Name="drinksBttn" 
+                Height="30" Width="100"
+                Content="Drinks"
+                Margin="5,5,5,5"
+                HorizontalAlignment="Left" Click="drinksBttn_Click">
+            </Button>
+            <Button x:Name="editOrderBttn" 
+                Height="30" Width="100"
+                Content="Edit Order"
+                Margin="5,5,5,5"
+                HorizontalAlignment="Left" Click="editOrderBttn_Click">
+            </Button>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Name="orderTypeStack">
+            <Button x:Name="walkInBttn" 
                 Height="30" Width="100"
                 Content="Walk-In"
                 Margin="5,5,5,5"
-                HorizontalAlignment="Left">
+                HorizontalAlignment="Left"
+                Click="walkInBttn_Click">
             </Button>
-            <Button x:Name="PickUpButton" 
+            <Button x:Name="pickUpBttn" 
                 Height="30" Width="100"
                 Content="Pick-Up"
                 Margin="5,5,5,5"
-                HorizontalAlignment="Left">
+                HorizontalAlignment="Left" Click="pickUpBttn_Click">
             </Button>
-            <Button x:Name="DriveThruButton" 
+            <Button x:Name="driveThruBttn" 
                 Height="30" Width="100"
                 Content="Drive-Thru"
                 Margin="5,5,5,5"
+                HorizontalAlignment="Left" Click="driveThruBttn_Click">
+            </Button>
+        </StackPanel>
+
+        <!-- Entree Options -->
+        <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="30,10,10,10" Name="entreeOptionLeftStack">
+            <Button x:Name="briarheartBurgerBttn" 
+                Height="60" Width="150"
+                Content="Briarheart Burger"
+                Margin="5,5,5,5"
+                HorizontalAlignment="Left" Click="briarheartBurgerBttn_Click">
+            </Button>
+            <Button x:Name="doubleDraugrBttn" 
+                Height="60" Width="150"
+                Content="Double Draugr"
+                Margin="5,5,5,5"
+                HorizontalAlignment="Left" Click="doubleDraugrBttn_Click">
+            </Button>
+            <Button x:Name="gardenOrcOmeletteBttn" 
+                Height="60" Width="150"
+                Content="Garden Orc Omelette"
+                Margin="5,5,5,5"
+                HorizontalAlignment="Left" Click="gardenOrcOmeletteBttn_Click">
+            </Button>
+            <Button x:Name="phillyPoacherBttn" 
+                Height="60" Width="150"
+                Content="Philly Poacher"
+                Margin="5,5,5,5"
+                HorizontalAlignment="Left" Click="phillyPoacherBttn_Click">
+            </Button>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="10,10,30,10" Name="entreeOptionRightStack">
+            <Button x:Name="smokehouseSkeletonBttn" 
+                Height="60" Width="150"
+                Content="Smokehouse Skeleton"
+                Margin="5,5,5,5"
+                HorizontalAlignment="Left" Click="smokehouseSkeletonBttn_Click">
+            </Button>
+            <Button x:Name="thalmorTripleBttn" 
+                Height="60" Width="150"
+                Content="Thalmor Triple"
+                Margin="5,5,5,5"
+                HorizontalAlignment="Left" Click="thalmorTripleBttn_Click">
+            </Button>
+            <Button x:Name="thugsTBoneBttn" 
+                Height="60" Width="150"
+                Content="Thugs T-Bone"
+                Margin="5,5,5,5"
+                HorizontalAlignment="Left" Click="thugsTBoneBttn_Click">
+            </Button>
+        </StackPanel>
+
+        <!-- Side Options -->
+        <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="30,10,10,10" Name="sideOptionLeftStack">
+            <Button x:Name="dragonbornWaffleFriesBttn" 
+                Height="60" Width="150"
+                Content="Dragonborn Waffle Fries"
+                Margin="5,5,5,5"
                 HorizontalAlignment="Left">
+            </Button>
+            <Button x:Name="friedMiraakBttn" 
+                Height="60" Width="150"
+                Content="Fried Miraak"
+                Margin="5,5,5,5"
+                HorizontalAlignment="Left">
+            </Button>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="10,10,30,10" Name="sideOptionRightStack">
+            <Button x:Name="madOtarGritsBttn" 
+                Height="60" Width="150"
+                Content="Mad Otar Grits"
+                Margin="5,5,5,5"
+                HorizontalAlignment="Left">
+            </Button>
+            <Button x:Name="vokunSaladBttn" 
+                Height="60" Width="150"
+                Content="Vokun Salad"
+                Margin="5,5,5,5"
+                HorizontalAlignment="Left">
+            </Button>
+        </StackPanel>
+
+        <!-- Drink Options -->
+        <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="30,10,10,10" Name="drinkOptionLeftStack">
+            <Button x:Name="aretinoAppleJuiceBttn" 
+                Height="60" Width="150"
+                Content="Aretino Apple Juice"
+                Margin="5,5,5,5"
+                HorizontalAlignment="Left" Click="aretinoAppleJuiceBttn_Click">
+            </Button>
+            <Button x:Name="candlehearthCoffeeBttn" 
+                Height="60" Width="150"
+                Content="Candlehearth Coffee"
+                Margin="5,5,5,5"
+                HorizontalAlignment="Left" Click="candlehearthCoffeeBttn_Click">
+            </Button>
+            <Button x:Name="markarthMilkBttn" 
+                Height="60" Width="150"
+                Content="Markarth Milk"
+                Margin="5,5,5,5"
+                HorizontalAlignment="Left" Click="markarthMilkBttn_Click">
+            </Button>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="10,10,30,10" Name="drinkOptionRightStack">
+            <Button x:Name="sailorSodaBttn" 
+                Height="60" Width="150"
+                Content="Sailor Soda"
+                Margin="5,5,5,5"
+                HorizontalAlignment="Left" Click="sailorSodaBttn_Click">
+            </Button>
+            <Button x:Name="warriorWaterBttn" 
+                Height="60" Width="150"
+                Content="Warrior Water"
+                Margin="5,5,5,5"
+                HorizontalAlignment="Left" Click="warriorWaterBttn_Click">
             </Button>
         </StackPanel>
 
