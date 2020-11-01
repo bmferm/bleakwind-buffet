@@ -6,17 +6,45 @@
 
 <div class="text-center">
     <h1 class="display-4">Bleakwind Buffet</h1>
-    <p>We at Bleakwind Buffet are proud to bring you authentic fantasy meals straight from the world of Skyrim. 
-    Shake the blood off your sword and sake your thirst with one of our old-fashioned sailor sodas. 
-    Hack into a Smokehouse Skeleton with your dagger. Or vanquish the the mighty Thalmor Triple Burger! 
-    You’ve had a hard adventure and earned your loot, so spend it with us!
+    <p>
+        We at Bleakwind Buffet are proud to bring you authentic fantasy meals straight from the world of Skyrim.
+        Shake the blood off your sword and sake your thirst with one of our old-fashioned sailor sodas.
+        Hack into a Smokehouse Skeleton with your dagger. Or vanquish the the mighty Thalmor Triple Burger!
+        You’ve had a hard adventure and earned your loot, so spend it with us!
     </p>
-    <h2>Entrees</h2>
-    <div class="menu-item">
-        
+    <h2>Combo Deal</h2>
+    <p>
+        Combine your choice of entree, side, and drink to receive a $1 discount on your meal.
+    </p>
+    <div class="menu-list">
+        <h2>Entrees</h2>
+        @foreach (var entree in Model.entreeList)
+        {
+            <div class="menu-item">
+                <b class="item">@entree.ToString()</b>
+                <div class="price">Price: @entree.Price</div>
+                <div class="calories">Calories: @entree.Calories</div>
+            </div>
+        }
+        <p></p>
+        <h2>Sides</h2>
+        @foreach (var side in Model.sideList)
+        {
+            <div class="menu-item">
+                <b class="item">@side.ToString()</b>
+                <div class="price">Price: @side.Price</div>
+                <div class="calories">Calories: @side.Calories</div>
+            </div>
+        }
+        <p></p>
+        <h2>Drinks</h2>
+        @foreach (var drink in Model.drinkList)
+        {
+            <div class="menu-item">
+                <b class="item">@drink.ToString()</b>
+                <div class="price">Price: @drink.Price</div>
+                <div class="calories">Calories: @drink.Calories</div>
+            </div>
+        }
     </div>
-    <h2>Sides</h2>
-
-    <h2>Drinks</h2>
-
 </div>

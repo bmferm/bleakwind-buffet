@@ -69,3 +69,33 @@ body {
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
 }
+
+/* Menu Item Styles
+----------------------------------------------------- */
+div.menu-list {
+    padding: 0;
+    margin: 0;
+    border-top: 1px solid gray;
+}
+
+div.menu-list > li {
+    list-style-type: none;
+    border-bottom: 1px solid lightgray;
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    min-height: 50px;
+}
+
+.item {
+    color: darkslategray;
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.price, .calories {
+    display: flex;
+    flex-direction: row;
+}
