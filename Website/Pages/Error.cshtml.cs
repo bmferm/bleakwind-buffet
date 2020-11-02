@@ -10,6 +10,9 @@ using Microsoft.Extensions.Logging;
 namespace Website.Pages
 {
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+    /// <summary>
+    /// A class for modeling errors.
+    /// </summary>
     public class ErrorModel : PageModel
     {
         public string RequestId { get; set; }
@@ -18,11 +21,18 @@ namespace Website.Pages
 
         private readonly ILogger<ErrorModel> _logger;
 
+        /// <summary>
+        /// Logs errors
+        /// </summary>
+        /// <param name="logger"></param>
         public ErrorModel(ILogger<ErrorModel> logger)
         {
             _logger = logger;
         }
 
+        /// <summary>
+        /// Gets the requested ID.
+        /// </summary>
         public void OnGet()
         {
             RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier;
